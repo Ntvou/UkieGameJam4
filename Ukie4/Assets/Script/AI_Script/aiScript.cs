@@ -6,16 +6,31 @@ using UnityEngine.AI;
 public class aiScript : MonoBehaviour
 {
     public GameObject Seat;
+    Animator animator;
+    NavMeshAgent agent;
     // Start is called before the first frame update
     void Start()
     {
         Seat = GameObject.FindGameObjectWithTag("Seat");
+        animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        NavMeshAgent navmesh = GetComponent<NavMeshAgent>();
-        navmesh.destination = Seat.transform.position;
+       
+        
+
+        if (agent.hasPath)
+        {
+          
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            
+            animator.SetBool("IsMoving", false);
+        }
     }
 }
