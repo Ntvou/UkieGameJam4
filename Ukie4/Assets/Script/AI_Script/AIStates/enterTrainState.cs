@@ -6,7 +6,7 @@ public class enterTrainState : AiState
 {
     public void Enter(AiAgent agent)
     {
-       
+        agent.navMeshAgent.destination = agent.Seat.position;
     }
 
     public void Exit(AiAgent agent)
@@ -21,7 +21,10 @@ public class enterTrainState : AiState
 
     public void Update(AiAgent agent)
     {
-        agent.navMeshAgent.destination = agent.Seat.position;
-       
+        if (agent.navMeshAgent.destination == agent.Seat.position)
+        {
+            agent.stateMachine.ChangeState(AiStateId.idleStanding);
+        }
+
     }
 }
