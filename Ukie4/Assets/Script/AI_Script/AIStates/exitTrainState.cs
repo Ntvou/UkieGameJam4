@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enterTrainState : AiState
+public class exitTrainState : AiState
 {
     public void Enter(AiAgent agent)
     {
-       
+        
     }
 
     public void Exit(AiAgent agent)
@@ -16,12 +16,14 @@ public class enterTrainState : AiState
 
     public AiStateId GetId()
     {
-        return AiStateId.enterTrain;
+        return AiStateId.exitTrain;
     }
 
     public void Update(AiAgent agent)
     {
-        agent.navMeshAgent.destination = agent.Seat.position;
+        agent.navMeshAgent.destination = agent.exit.position;
        
     }
+
+   
 }
