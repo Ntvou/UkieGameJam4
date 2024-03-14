@@ -27,6 +27,7 @@ public class AiAgent : MonoBehaviour
         stateMachine = new AiStateMachine(this);
         stateMachine.RegisterState(new enterTrainState());
         stateMachine.RegisterState(new exitTrainState());
+        stateMachine.RegisterState(new idleStandingState());
         stateMachine.ChangeState(initialState);
     }
 
