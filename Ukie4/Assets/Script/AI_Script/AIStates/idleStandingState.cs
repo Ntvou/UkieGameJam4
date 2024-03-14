@@ -21,7 +21,7 @@ public class idleStandingState : AiState
 
     public void Update(AiAgent agent)
     {
-        
+        Debug.Log("idle state");
     }
 
    

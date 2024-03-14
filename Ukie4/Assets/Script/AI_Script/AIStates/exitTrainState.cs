@@ -21,8 +21,9 @@ public class exitTrainState : AiState
 
     public void Update(AiAgent agent)
     {
-       if(agent.navMeshAgent.destination == agent.exit.position)
+       if(!agent.navMeshAgent.hasPath)
         {
+           
             agent.stateMachine.ChangeState(AiStateId.idleStanding);
         }
        
