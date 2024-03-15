@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class aiScript : MonoBehaviour
 {
-    public GameObject Seat;
+    [HideInInspector]public GameObject Seat;
     Animator animator;
     NavMeshAgent agent;
     // Start is called before the first frame update

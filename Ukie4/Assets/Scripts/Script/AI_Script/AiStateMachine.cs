@@ -31,6 +31,7 @@ public class AiStateMachine
     {
         if (GetState(currentState) != null)
         {
+           // Debug.Log("changing state from the state machine " + currentState);
             GetState(currentState).Update(agent);
         }
        // GetState(currentState)?.Update(agent);

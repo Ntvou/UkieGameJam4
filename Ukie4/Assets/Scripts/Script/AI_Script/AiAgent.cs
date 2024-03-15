@@ -12,14 +12,17 @@ public class AiAgent : MonoBehaviour
     [HideInInspector] public Transform exit;
     [HideInInspector] public AiStateMachine stateMachine;
     /*[HideInInspector]*/ public NavMeshAgent navMeshAgent;
-    
+    public Transform enemyCollision;
 
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
         Seat = GameObject.FindGameObjectWithTag("Seat").transform;
         exit = GameObject.FindGameObjectWithTag("Exit").transform;
+
+        enemyCollision = transform.Find("EnemyTrigger");
 
         navMeshAgent = GetComponent<NavMeshAgent>();
        
@@ -35,6 +38,10 @@ public class AiAgent : MonoBehaviour
     public void Update()
     {
         
+        Debug.Log("ai agent script " + stateMachine.currentState);
         stateMachine.Update();
+
+
     }
+    
 }
