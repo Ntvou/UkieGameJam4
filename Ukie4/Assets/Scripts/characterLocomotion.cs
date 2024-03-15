@@ -22,13 +22,13 @@ public class CharacterLocomotion : MonoBehaviour
         // Check for input to turn left or right
         if (Input.GetKeyDown(KeyCode.A) && !isFacingLeft)
         {
-            Turn(-1); // Turn left
+            Turn(1); // Turn left
             isFacingLeft = true; // Now facing left
             isFacingRight = false; // Not facing right
         }
         else if (Input.GetKeyDown(KeyCode.D) && !isFacingRight)
         {
-            Turn(1); // Turn right
+            Turn(-1); // Turn right
             isFacingRight = true; // Now facing right
             isFacingLeft = false; // Not facing left
         }
