@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Seat
   - Exit
+  - StandUp
   layers:
   - Default
   - TransparentFX

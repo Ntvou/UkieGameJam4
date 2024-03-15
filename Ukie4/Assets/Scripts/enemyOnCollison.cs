@@ -20,11 +20,19 @@ public class enemyOnCollison : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("dsd");
+      
         if (other.gameObject.tag == "Player")
         {
             inRange = true;
-            Debug.Log("player has entered the enemy zone");
+            //Debug.Log("player has entered the enemy zone");
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            inRange = false;
+            //Debug.Log("player has exited the enemy zone");
         }
     }
 

@@ -6,7 +6,8 @@ public enum AiStateId
 {
     enterTrain,
     exitTrain,
-    idleStanding
+    idleStanding,
+    idleSitting
 }
 public interface AiState
 {

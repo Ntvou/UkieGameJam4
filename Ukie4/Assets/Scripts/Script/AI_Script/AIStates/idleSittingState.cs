@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class idleStandingState : AiState
+public class idleSittingState : AiState
 {
     public void Enter(AiAgent agent)
     {
-       
-        agent.navMeshAgent.destination = agent.standingPos.position;
+        
     }
 
     public void Exit(AiAgent agent)
@@ -17,7 +16,7 @@ public class idleStandingState : AiState
 
     public AiStateId GetId()
     {
-        return AiStateId.idleStanding;
+        return AiStateId.idleSitting;
     }
 
     public void Update(AiAgent agent)
@@ -25,5 +24,5 @@ public class idleStandingState : AiState
         
     }
 
-   
+    
 }
