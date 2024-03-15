@@ -8,5 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainmenu.unity
     guid: 4d776b7b0a381ac4b860007b988ad5dd
+  - enabled: 1
+    path: Assets/Scenes/AI NIck Loop.unity
+    guid: f868c88ac4c2749408bd0bd02219c878
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
