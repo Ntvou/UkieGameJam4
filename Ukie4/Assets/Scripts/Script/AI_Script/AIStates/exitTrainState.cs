@@ -24,7 +24,7 @@ public class exitTrainState : AiState
        if(!agent.navMeshAgent.hasPath)
         {
            
-            agent.stateMachine.ChangeState(AiStateId.idleStanding);
+            agent.stateMachine.ChangeState(AiStateId.idleSitting);
         }
        
     }
