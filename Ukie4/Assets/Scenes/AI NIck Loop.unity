@@ -1296,7 +1296,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f5ea0194cf001c429c08dbe58efa7db, type: 2}
+  - {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2629,6 +2629,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 302308262728833003, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
+    - target: {fileID: 563466053787022776, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
+    - target: {fileID: 897985746602330816, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
+    - target: {fileID: 969108278843095611, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
+    - target: {fileID: 1715235619585514703, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
+    - target: {fileID: 2099627282514588153, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
     - target: {fileID: 2577689525815169539, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
       propertyPath: m_Name
       value: Stationedit
@@ -2685,6 +2709,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5768961537150554818, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
+    - target: {fileID: 5897269963624618338, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
+    - target: {fileID: 6014012757272251882, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
+    - target: {fileID: 7496232396854105171, guid: e7a1db60b8bcc1442b525f85722c6b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c67e02412999aa0478fcb8560cbd1bee, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
