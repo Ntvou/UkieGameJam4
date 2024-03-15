@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
-            moveDirection.y = jumpPower;
+           // moveDirection.y = jumpPower;
         }
         else
         {
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!characterController.isGrounded)
         {
-            moveDirection.y -= gravity * Time.deltaTime;
+           // moveDirection.y -= gravity * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.R) && canMove)
@@ -72,10 +72,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (canMove)
         {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+            //rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            //playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            //transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
 }
