@@ -6,8 +6,9 @@ public class idleStandingState : AiState
 {
     public void Enter(AiAgent agent)
     {
-       
-        agent.navMeshAgent.destination = agent.standingPos.position;
+        int randNum = Random.Range(0, agent.standingPos.Length);
+        agent.navMeshAgent.destination = agent.standingPos[randNum].transform.position;
+        Debug.Log(randNum);
     }
 
     public void Exit(AiAgent agent)

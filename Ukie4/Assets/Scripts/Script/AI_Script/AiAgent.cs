@@ -8,9 +8,9 @@ public class AiAgent : MonoBehaviour
     public AiStateId initialState;
     //public AiAgentConfig config;
 
-    [HideInInspector] public Transform Seat;
-    [HideInInspector] public Transform exit;
-    [HideInInspector] public Transform standingPos;
+    [HideInInspector] public GameObject[] Seat;
+    [HideInInspector] public GameObject[] exit;
+    [HideInInspector] public GameObject[] standingPos;
 
     [HideInInspector] public AiStateMachine stateMachine;
     /*[HideInInspector]*/ public NavMeshAgent navMeshAgent;
@@ -21,10 +21,11 @@ public class AiAgent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Seat = GameObject.FindGameObjectWithTag("Seat").transform;
-        exit = GameObject.FindGameObjectWithTag("Exit").transform;
-        standingPos = GameObject.FindGameObjectWithTag("StandUp").transform;
-
+        
+        Seat = GameObject.FindGameObjectsWithTag("Seat");
+        exit = GameObject.FindGameObjectsWithTag("Exit");
+        standingPos = GameObject.FindGameObjectsWithTag("StandUp");
+       
 
         enemyCollision = transform.Find("EnemyTrigger");
 

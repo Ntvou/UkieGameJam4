@@ -6,7 +6,9 @@ public class exitTrainState : AiState
 {
     public void Enter(AiAgent agent)
     {
-        agent.navMeshAgent.destination = agent.exit.position;
+        int randNum = Random.Range(0, agent.exit.Length);
+        agent.navMeshAgent.destination = agent.exit[randNum].transform.position;
+        Debug.Log(randNum);
     }
 
     public void Exit(AiAgent agent)
