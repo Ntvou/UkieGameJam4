@@ -23,6 +23,7 @@ public class enterTrainState : AiState
 
     public void Update(AiAgent agent)
     {
+        
         if (!agent.navMeshAgent.hasPath)
         {
             agent.stateMachine.ChangeState(AiStateId.idleSitting);
