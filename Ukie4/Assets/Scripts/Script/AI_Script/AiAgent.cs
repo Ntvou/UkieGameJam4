@@ -7,7 +7,7 @@ public class AiAgent : MonoBehaviour
 {
     public AiStateId initialState;
     //public AiAgentConfig config;
-
+    //[HideInInspector] public GameObject[] Seat;
     [HideInInspector] public GameObject[] Seat;
     [HideInInspector] public GameObject[] exit;
     [HideInInspector] public GameObject[] standingPos;
