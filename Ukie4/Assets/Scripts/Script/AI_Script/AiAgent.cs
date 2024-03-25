@@ -7,13 +7,14 @@ public class AiAgent : MonoBehaviour
 {
     public AiStateId initialState;
     //public AiAgentConfig config;
-    //[HideInInspector] public GameObject[] Seat;
-    [HideInInspector] public GameObject[] Seat;
+    /*[HideInInspector] */private GameObject[] seatList;
+    [SerializeField] public Dictionary<GameObject, bool> seatDict = new Dictionary<GameObject, bool>();
+   
     [HideInInspector] public GameObject[] exit;
     [HideInInspector] public GameObject[] standingPos;
 
     [HideInInspector] public AiStateMachine stateMachine;
-    /*[HideInInspector]*/ public NavMeshAgent navMeshAgent;
+    [HideInInspector] public NavMeshAgent navMeshAgent;
     public Transform enemyCollision;
 
 
@@ -22,7 +23,12 @@ public class AiAgent : MonoBehaviour
     void Start()
     {
         
-        Seat = GameObject.FindGameObjectsWithTag("Seat");
+        seatList = GameObject.FindGameObjectsWithTag("Seat");
+        foreach(var seat in seatList)
+        {
+            seatDict.Add(seat, false);
+        }
+
         exit = GameObject.FindGameObjectsWithTag("Exit");
         standingPos = GameObject.FindGameObjectsWithTag("StandUp");
        
@@ -44,7 +50,7 @@ public class AiAgent : MonoBehaviour
     public void Update()
     {
         
-        Debug.Log("ai agent script " + stateMachine.currentState);
+       // Debug.Log("ai agent script " + stateMachine.currentState);
         stateMachine.Update();
         if (enemyCollision.GetComponent<enemyOnCollison>().inRange)
         {

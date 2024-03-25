@@ -19,15 +19,17 @@ public class GameManager : MonoBehaviour
     {
         for(int i=0; i<numNpcs; i++)
         {
-          
-            GameObject spawnPoint = spawnPoints[Random.Range(0,spawnPoints.Length)];
-            Debug.Log(spawnPoint);
-            Instantiate(NpcPrefab,spawnPoint.transform.position,Quaternion.identity);
-
-            NPCSpawned++;
-            
-           
+            Invoke(nameof(spawn), i+1);  
         }
+    }
+    private void spawn()
+    {
+        GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+       
+        Instantiate(NpcPrefab, spawnPoint.transform.position, Quaternion.identity);
+
+        NPCSpawned++;
+        Debug.Log("npc spawed");
     }
 
 
